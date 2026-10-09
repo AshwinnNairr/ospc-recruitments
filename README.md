@@ -49,14 +49,3 @@ Only submit your own report file. Do not include exploit scripts, real credentia
 
 Assess severity based on impact and exploitability; explain your reasoning. If you are uncertain, say so. Avoid duplicate reports of the same underlying cause.
 
-## Repository map
-
-```text
-src/server.js       HTTP server and application routes
-src/data.js         Fictional demo users and notes
-src/web.js          Request helpers, page rendering, and session handling
-submissions/        Submission template and placeholder
-```
-
-The evaluator guide is distributed separately and is not part of the public challenge repository.
-# ospc-recruitments
