@@ -8,7 +8,7 @@ Date: 2026-10-10
 - Severity: High
 - Affected file and lines: src/server.js, lines 58–65 and 68–72
 - Affected route or feature: POST /api/profile and GET /admin
-- Evidence: The profile endpoint uses Object.assign(user, changes) to apply submitted properties directly to the user object. I logged in as Alex, sent {"role":"admin"}, and the API changed my role to admin. After that, I could access /admin.
+- Evidence: The profile endpoint uses Object.assign(user, changes) to apply submitted properties directly to the user object. I logged in as Alex, sent {"role":"admin"}, and the API changed my role to admin. After that, I accessed /admin, which displayed the synthetic training flag OSPC{synthetic_training_flag}. This confirmed that I could access the admin-only page after elevating my privileges.
 - Impact: Regular users can elevate their own privileges and gain access to administrator functionality.
 - Recommended mitigation: Whitelist the profile fields users are allowed to update. Sensitive properties such as roles should only be changed through a separate, properly authorized process.
 
